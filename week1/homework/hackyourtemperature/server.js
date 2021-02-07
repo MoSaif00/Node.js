@@ -8,7 +8,13 @@ app.set('view engine', 'handlebars');
 app.engine('handlebars', exphbs({defaultLayout: false}));
 
 app.get('/', (req, res) => {
-  res.render(index);
+  res.render('index');
+});
+
+app.post('/weather', (req, res) => {
+  let cityName = req.body.cityName;
+  res.send(cityName);
+  res.status(200);
 });
 
 // Listen to local host on port 3000
