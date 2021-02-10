@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/weather', (req, res) => {
-  let cityName = req.body.cityName;
+  const cityName = req.body.cityName;
   res.send(cityName);
   res.status(200);
 });
