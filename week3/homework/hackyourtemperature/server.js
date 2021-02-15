@@ -19,14 +19,14 @@ app.post('/weather', (req, res) => {
   axios(
     `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
   )
-    .then(function (weather) {
+    .then((weather) => {
       const roundedTemperature = Math.round(weather.data.main.temp);
       res.render('index', {
         cityName: `${cityName}`,
         weatherText: `The Temperature is :${roundedTemperature} °C Degree `,
       });
     })
-    .catch(function (err) {
+    .catch((err) => {
       res.render('index', {
         weatherText: `Opps, No Temperature Information. ${cityName} is not found`,
       });

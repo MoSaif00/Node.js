@@ -45,14 +45,14 @@
          border-top-right-radius: 0;
         border-top-left-radius: 0;
     }
-        
+  
     </style>
 </head>
 <body class="text-center">
     <main class="form-layout">
         <form action="/weather" method="POST">
             <input type="text" name="cityName" class="form-control" placeholder="Enter a city name ">
-            <Button type="submit" class="w-100 btn btn-lg btn-primary text-capitalize">Search</Button>
+            <Button type="submit" class="clickBtn w-100 btn btn-lg btn-primary text-capitalize">Search</Button>
             <hr>
             <h2 class="pt-3 pb-3 text-uppercase text-success">{{cityName}}</h2>
             <p>{{weatherText}}</p>
