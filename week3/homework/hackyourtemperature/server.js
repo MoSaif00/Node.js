@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const axios = require('axios');
 
 const app = express();
 app.use(express.json());
@@ -13,8 +14,7 @@ app.get('/', (req, res) => {
 
 app.post('/weather', (req, res) => {
   const cityName = req.body.cityName;
-  res.send(cityName);
-  res.status(200);
+  console.log(cityName);
 });
 
 // Listen to local host on port 3000
