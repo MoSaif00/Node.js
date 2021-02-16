@@ -28,7 +28,6 @@ app.post('/blogs', (req, res) => {
   if (isInvalid(req)) {
     res.status(400);
     res.send('Invalid Request!! sorry');
-    return;
   } else {
     const title = req.body.title;
     const content = req.body.content;
@@ -43,7 +42,7 @@ app.put('/posts/:title', (req, res) => {
   if (isInvalid(req)) {
     res.status(400);
     res.send('Invalid Request!! sorry');
-    return;
+    
   } else {
     const title = req.params.title;
     const content = req.body.content;
