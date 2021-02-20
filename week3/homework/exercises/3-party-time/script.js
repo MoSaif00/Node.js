@@ -7,10 +7,10 @@
  * Hints:
  * - make sure to use the correct headers and http method in the request
  */
+const fetch = require('node-fetch');
 
 async function makeReservation() {
   // YOUR CODE GOES IN HERE
-  const fetch = require('node-fetch');
   try {
     const body = {
       name: 'Mo Saif',

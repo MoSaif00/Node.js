@@ -8,6 +8,7 @@
  * Hints:
  * - Check the handlebars npm page for examples and documentation
  */
+const Handlebars = require('handlebars');
 
 const subjects = [
   'shark',
@@ -31,7 +32,6 @@ const punchlines = [
 
 function drawCard() {
   // YOUR CODE GOES IN HERE
-  const Handlebars = require('handlebars');
   const cardData = {
     subject: getRandomElement(subjects),
     punchline: getRandomElement(punchlines),
